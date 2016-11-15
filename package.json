@@ -1,0 +1,35 @@
+{
+  "name": "jodel-api",
+  "version": "1.0.0",
+  "description": "Node.js Jodel API",
+  "main": "./dist/lib.js",
+  "typings": "./dist/lib.d.ts",
+  "scripts": {
+    "test": "node_modules/.bin/tsc",
+    "prePublish": "node_modules/.bin/tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikeee/node-jodel-api.git"
+  },
+  "keywords": [
+    "jodel",
+    "api"
+  ],
+  "author": "Niklas Mollenhauer",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nikeee/node-jodel-api/issues"
+  },
+  "homepage": "https://github.com/nikeee/node-jodel-api#readme",
+  "devDependencies": {
+    "typescript": "^2.0.7"
+  },
+  "dependencies": {
+    "@types/humps": "^1.1.2",
+    "@types/node": "^6.0.46",
+    "@types/node-fetch": "^1.6.5",
+    "humps": "^1.1.0",
+    "node-fetch": "^1.6.0"
+  }
+}
