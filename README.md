@@ -1,4 +1,4 @@
-# node-jodel-api
+# node-jodel-api [![Travis Build Status](https://travis-ci.org/nikeee/node-jodel-api.svg?branch=master)](https://travis-ci.org/nikeee/node-jodel-api) [![npm version](https://badge.fury.io/js/jodel-api.svg)](https://badge.fury.io/js/jodel-api)
 > Node.js Jodel API, written in TypeScript
 
 ## Using the Library
