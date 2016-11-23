@@ -11,6 +11,7 @@ type JodelVersion = "4.3.7" | "4.4.9" | "4.5.11" | "4.6.6" | "4.7.7"
 							| "4.8.4" | "4.9.3" | "4.10.3" | "4.11.2" | "4.12.5"
 							| "4.13.2" | "4.14.1" | "4.15.2" | "4.16.1" | "4.17.1"
 							| "4.18.1" | "4.18.2" | "4.21.1" | "4.22.2"
+							| "4.27.0" | "4.28.1"
 							;
 const latestWodelVersion: WodelVersion = "1.1";
 type WodelVersion = "1.1";
@@ -36,6 +37,8 @@ const jodelKeys: JodelKeyConfigs<JodelVersion> = {
 	"4.18.2": { key: "axMGahEhhBHsSiUogkqzpLEEVAePsLbDTYoVJimH", clientVersion: "4.18.2", apiVersion: "0.2" },
 	"4.21.1": { key: "MowxMGuZnoXYgVoAlqmcgUPxdbszEBpBXpjpccbg", clientVersion: "4.21.1", apiVersion: "0.2" },
 	"4.22.2": { key: "zWACiYUMtLRiNATSvdjVtUutOMboswcXCPbZMeSE", clientVersion: "4.22.2", apiVersion: "0.2" },
+	"4.27.0": { key: "VwJHzYUbPjGiXWauoVNaHoCWsaacTmnkGwNtHhjy", clientVersion: "4.27.0", apiVersion: "0.2" },
+	"4.28.1": { key: "aPLFAjyUusVPHgcgvlAxihthmRaiuqCjBsRCPLan", clientVersion: "4.28.1", apiVersion: "0.2" },
 };
 
 const wodelKeys: JodelKeyConfigs<WodelVersion> = {
