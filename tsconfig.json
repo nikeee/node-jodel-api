@@ -10,7 +10,8 @@
 		"noImplicitAny": true,
 		"noImplicitThis": true,
 		"noImplicitReturns": true,
-		"strictNullChecks": true
+		"strictNullChecks": true,
+		"alwaysStrict": true
 	},
 	"exclude": [
 		"dist",
