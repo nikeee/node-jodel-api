@@ -6,7 +6,7 @@ These are some publicly available keys:
 ```TypeScript
 import { JodelKeyConfigs } from "jodel-api";
 
-const latestJodelVersion: keyof JodelKeyConfigs<JodelVersion> = "4.30.2";
+const latestJodelVersion: keyof JodelKeyConfigs<JodelVersion> = "4.31.1";
 type JodelVersion = "4.27.0" | "4.28.1" | "4.29.1" | "4.30.2" | "4.31.1";
 const latestWodelVersion: keyof JodelKeyConfigs<WodelVersion> = "1.1";
 type WodelVersion = "1.1";
