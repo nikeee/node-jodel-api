@@ -25,8 +25,7 @@ export class JodelConfigBase implements JodelConfig {
 
 	public async signHeaders(method: Types.HttpVerb, path: string, timestamp: Date, parameters: string, body: string, headers: Types.FetchHeaders): Promise<Types.SignedFetchHeaders> {
 
-		const newHeaders: Types.FetchHeaders = {};
-		Object.assign(newHeaders, headers);
+		const newHeaders: Types.FetchHeaders = {...headers};
 
 		const authHeader = newHeaders["Authorization"];
 		const auth = authHeader ? authHeader.split(" ")[1] : "";
