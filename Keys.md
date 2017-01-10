@@ -17,7 +17,7 @@ const jodelKeys: JodelKeyConfigs<JodelVersion> = {
 	"4.28.1": { key: "aPLFAjyUusVPHgcgvlAxihthmRaiuqCjBsRCPLan", clientVersion: "4.28.1", apiVersion: "0.2" },
 	"4.29.1": { key: "dIHNtHWOxFmoFouufSflpTKYjPmCIhWUCQHgbNzR", clientVersion: "4.29.1", apiVersion: "0.2" },
 	"4.30.2": { key: "zpwKnTvubiKritHEnjOTcTeHxLJJNTEVumuNZqcE", clientVersion: "4.30.2", apiVersion: "0.2" },
-	"4.31.1": { key: "bgulhzgo9876GFKgguzTZITFGMn879087vbgGFuz", clientVersion: "4.31.1", apiVersion: "0.2" },
+	"4.31.1": { key: "plerFToqEdWlzShdZlTywaCHRuzlKIMsNmOJVDGE", clientVersion: "4.31.1", apiVersion: "0.2" },
 };
 
 const wodelKeys: JodelKeyConfigs<WodelVersion> = {
