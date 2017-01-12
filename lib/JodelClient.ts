@@ -26,6 +26,9 @@ class JodelAPI {
 	}
 
 	private async doRequest<T>(method: Types.HttpVerb, path: string, accessToken: Types.AccessToken | undefined, queryParams: Types.KeyValue<any>, body: Types.KeyValue<any> | null): Promise<T> {
+		// if (!path.endsWith("/"))
+		//	path += "/";
+
 		let url = this.config.endpoint + path;
 
 		let qs: string = "";

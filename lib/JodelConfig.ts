@@ -30,8 +30,9 @@ export class JodelConfigBase implements JodelConfig {
 		const authHeader = newHeaders["Authorization"];
 		const auth = authHeader ? authHeader.split(" ")[1] : "";
 
-		if (!path.endsWith("/"))
-			path += "/";
+		// Not appending / because it has to match the path in the request char-by-char
+		// if (!path.endsWith("/"))
+		//	path += "/";
 
 		const timestampISO = timestamp.toISOString().replace(/\.\d+Z/, "Z"); // trim off milliseconds and stuff
 
