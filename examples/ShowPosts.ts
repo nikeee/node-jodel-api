@@ -12,7 +12,12 @@ const jodelKeys: JodelKeyConfigs<JodelVersion> = {
 };
 
 const keyConfig = jodelKeys["4.31.1"];
+
+// Create a random UID. Do not do this every time.
+// Instead, re - use the first generated UID + accessToken by loggin in with
+// JodelClient#loginWithToken
 const uid = AndroidJodelConfig.createDeviceUID();
+
 const config = new AndroidJodelConfig(uid, keyConfig);
 
 async function main() {
