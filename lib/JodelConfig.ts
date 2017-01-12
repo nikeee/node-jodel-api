@@ -52,7 +52,7 @@ export class JodelConfigBase implements JodelConfig {
 		newHeaders["X-Client-Type"] = this.clientType;
 		newHeaders["X-Api-Version"] = this.keyConfig.apiVersion;
 		newHeaders["X-Timestamp"] = timestampISO;
-		newHeaders["X-Authorization"] = `HMAC ${signature.toLocaleUpperCase()}`;
+		newHeaders["X-Authorization"] = "HMAC " + signature.toUpperCase();
 
 		return newHeaders as Types.SignedFetchHeaders;
 	}
@@ -63,7 +63,7 @@ export class JodelConfigBase implements JodelConfig {
 			hmac.on("readable", () => {
 				const signature = hmac.read();
 				if (signature && signature instanceof Buffer)
-					return resolve(signature.toString("hex"));
+					return resolve(signature.toString("hex").toUpperCase());
 				return reject("No buffer :(");
 			});
 			const dataBuffer = Buffer.from(data, "utf8");
