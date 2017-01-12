@@ -8,6 +8,6 @@ export class AndroidJodelConfig extends JodelConfigBase {
 		super(deviceUID, keyConfig, "android_" + keyConfig.clientVersion, AndroidJodelConfig.CLIENT_ID, AndroidJodelConfig.createUserAgent(keyConfig.clientVersion));
 	}
 	private static createUserAgent(version: string): string {
-		return `Jodel/${version} Dalvik/2.1.0 (Linux; U; Android 6.0.1; Nexus 5 Build/MOB30Y)`;
+		return `Jodel/${version} Dalvik/2.1.0 (Linux; U; Android 6.0.1; Nexus 5 Build/MMB29V)`;
 	}
 }
