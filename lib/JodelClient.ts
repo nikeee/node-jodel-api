@@ -309,7 +309,15 @@ export class JodelClient {
 	constructor(private readonly config: JodelConfig, private _accessToken?: Types.AccessToken) {
 		this.api = new JodelAPI(config, _accessToken);
 	}
-	public async login(location: Types.Location): Promise<void> {
+
+	/**
+	 * @deprecated Use JodeClient#register instead
+	 */
+	public login(location: Types.Location): Promise<void> {
+		return this.register(location);
+	}
+
+	public async register(location: Types.Location): Promise<void> {
 		const authRes = await this.api.getRequestToken({
 			clientId: this.config.clientId,
 			deviceUid: this.config.deviceUID,
