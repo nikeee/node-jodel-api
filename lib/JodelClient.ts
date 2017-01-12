@@ -105,27 +105,36 @@ class JodelAPI {
 		return this.get<Types.GetModerationPostsResponse>("/v3/moderation")
 	}
 
-	public getMostDiscussedPosts(position: Types.Coordinates, after?: string): Promise<Types.GetPostsResponse> {
+	// TODO: Check if position parameter is still used
+	public getMostDiscussedPosts(position?: Types.Coordinates, after?: string): Promise<Types.GetPostsResponse> {
 		const params: any = {};
 		if (after) params["after"] = after;
-		if (position) params["lat"] = position.lat;
-		if (position) params["lng"] = position.lng;
+		if (position) {
+			params["lat"] = position.lat;
+			params["lng"] = position.lng;
+		}
 		return this.get<Types.GetPostsResponse>("/v2/posts/location/discussed", params).then(ps => { JodelAPI.fixPosts(ps.posts); return ps; });
 	}
 
-	public getMostPopularPosts(position: Types.Coordinates, after?: string): Promise<Types.GetPostsResponse> {
+	// TODO: Check if position parameter is still used
+	public getMostPopularPosts(position?: Types.Coordinates, after?: string): Promise<Types.GetPostsResponse> {
 		const params: any = {};
 		if (after) params["after"] = after;
-		if (position) params["lat"] = position.lat;
-		if (position) params["lng"] = position.lng;
+		if (position) {
+			params["lat"] = position.lat;
+			params["lng"] = position.lng;
+		}
 		return this.get<Types.GetPostsResponse>("/v2/posts/location/popular", params).then(ps => { JodelAPI.fixPosts(ps.posts); return ps; });
 	}
 
-	public getMostRecentPosts(position: Types.Coordinates, after?: string): Promise<Types.GetPostsResponse> {
+	// TODO: Check if position parameter is still used
+	public getMostRecentPosts(position?: Types.Coordinates, after?: string): Promise<Types.GetPostsResponse> {
 		const params: any = {};
 		if (after) params["after"] = after;
-		if (position) params["lat"] = position.lat;
-		if (position) params["lng"] = position.lng;
+		if (position) {
+			params["lat"] = position.lat;
+			params["lng"] = position.lng;
+		}
 		return this.get<Types.GetPostsResponse>("/v2/posts/location/", params).then(ps => { JodelAPI.fixPosts(ps.posts); return ps; });
 	}
 
@@ -378,15 +387,18 @@ export class JodelClient {
 		});
 	}
 
-	public getMostPopularPosts(position: Types.Coordinates, after?: Types.PostId): Promise<Types.GetPostsResponse> {
+	// TODO: Check if position parameter is still used
+	public getMostPopularPosts(position?: Types.Coordinates, after?: Types.PostId): Promise<Types.GetPostsResponse> {
 		if (!this.accessToken) return Promise.reject<Types.GetPostsResponse>("No access token provided");
 		return this.api.getMostPopularPosts(position, after);
 	}
-	public getMostDiscussedPosts(position: Types.Coordinates, after?: Types.PostId): Promise<Types.GetPostsResponse> {
+	// TODO: Check if position parameter is still used
+	public getMostDiscussedPosts(position?: Types.Coordinates, after?: Types.PostId): Promise<Types.GetPostsResponse> {
 		if (!this.accessToken) return Promise.reject<Types.GetPostsResponse>("No access token provided");
 		return this.api.getMostDiscussedPosts(position, after);
 	}
-	public getMostRecentPosts(position: Types.Coordinates, after?: Types.PostId): Promise<Types.GetPostsResponse> {
+	// TODO: Check if position parameter is still used
+	public getMostRecentPosts(position?: Types.Coordinates, after?: Types.PostId): Promise<Types.GetPostsResponse> {
 		if (!this.accessToken) return Promise.reject<Types.GetPostsResponse>("No access token provided");
 		return this.api.getMostRecentPosts(position, after);
 	}
