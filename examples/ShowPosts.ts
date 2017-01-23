@@ -1,17 +1,10 @@
 // npm i -S jodel-api
 // tsc --module commonjs --target ES2015 ShowPosts.ts
 
-import { JodelClient, JodelKeyConfigs, AndroidJodelConfig } from "jodel-api";
-
-type JodelVersion = "4.27.0" | "4.28.1" | "4.29.1" | "4.30.2" | "4.31.1";
+import { JodelClient, JodelKeyConfig, AndroidJodelConfig } from "jodel-api";
 
 // See Keys.md
-const jodelKeys: JodelKeyConfigs<JodelVersion> = {
-	/* "jodelVersion": {key: "key", clientVersion: "jodelVersion", apiVersion: "0.2"} */
-	"4.31.1": { key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", clientVersion: "4.31.1", apiVersion: "0.2" },
-};
-
-const keyConfig = jodelKeys["4.31.1"];
+const keyConfig: JodelKeyConfig<"4.31.1"> = { key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", clientVersion: "4.31.1", apiVersion: "0.2" };
 
 // Create a random UID. Do not do this every time.
 // Instead, re - use the first generated UID + accessToken by loggin in with
