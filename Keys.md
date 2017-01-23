@@ -4,32 +4,25 @@ However, [there are some keys publicly available on the internet](https://bitbuc
 
 These are some publicly available keys:
 ```TypeScript
-import { JodelKeyConfigs } from "jodel-api";
+import { JodelKeyConfig } from "jodel-api";
 
-const latestJodelVersion: keyof JodelKeyConfigs<JodelVersion> = "4.31.1";
 type JodelVersion = "4.27.0" | "4.28.1" | "4.29.1" | "4.30.2" | "4.31.1";
-const latestWodelVersion: keyof JodelKeyConfigs<WodelVersion> = "1.1";
-type WodelVersion = "1.1";
+const latestJodelVersion: JodelVersion = "4.31.1";
 
-const jodelKeys: JodelKeyConfigs<JodelVersion> = {
-	/* "jodelVersion": {key: "key", clientVersion: "jodelVersion", apiVersion: "0.2"} */
+const jodelKeys = {
 	"4.27.0": { key: "VwJHzYUbPjGiXWauoVNaHoCWsaacTmnkGwNtHhjy", clientVersion: "4.27.0", apiVersion: "0.2" },
 	"4.28.1": { key: "aPLFAjyUusVPHgcgvlAxihthmRaiuqCjBsRCPLan", clientVersion: "4.28.1", apiVersion: "0.2" },
 	"4.29.1": { key: "dIHNtHWOxFmoFouufSflpTKYjPmCIhWUCQHgbNzR", clientVersion: "4.29.1", apiVersion: "0.2" },
 	"4.30.2": { key: "zpwKnTvubiKritHEnjOTcTeHxLJJNTEVumuNZqcE", clientVersion: "4.30.2", apiVersion: "0.2" },
 	"4.31.1": { key: "plerFToqEdWlzShdZlTywaCHRuzlKIMsNmOJVDGE", clientVersion: "4.31.1", apiVersion: "0.2" },
 };
-
-const wodelKeys: JodelKeyConfigs<WodelVersion> = {
-	"1.1": { key: "bgulhzgo9876GFKgguzTZITFGMn879087vbgGFuz", clientVersion: "1.1", apiVersion: "0.2" }
-}
 ```
 The keys change with every release. If there are new keys available, this list might be updated.
 
 A `JodelKeyConfig` is used to do the singing of the outgoing messages which is required for every message. You also need a `JodelConfig` which uses the `JodelKeyConfig` to do the actual signing. For example, `AndroidJodelConfig` signs the requests just like the Android app.
 
 ## Config Instantiation
-To use one of the keys above, you need an instance of the `JodelConfig` interface. `jodel-api` comes with two classes that implement these: `AndroidJodelConfig` and `WodelJodelConfig`. If you have a key that was given to you by the Jodel Team, you have to implement your own JodelConfig class. See below.
+To use one of the keys above, you need an instance of the `JodelConfig` interface. `jodel-api` comes with the `AndroidJodelConfig` class that implements this. If you have a key that was given to you by the Jodel Team, you have to implement your own JodelConfig class. See below.
 ```TypeScript
 // Jodel Android client:
 import { JodelClient, AndroidJodelConfig } from "jodel-api";
@@ -37,15 +30,6 @@ import { JodelClient, AndroidJodelConfig } from "jodel-api";
 const keyConfig = jodelKeys[latestJodelVersion]; // using data from above
 const uid = AndroidJodelConfig.createDeviceUID();
 const config = new AndroidJodelConfig(uid, keyConfig);
-```
-
-To emulate a Wodel client, use:
-```TypeScript
-import { WodelJodelConfig } from "jodel-api";
-
-const keyConfig = wodelKeys[latestWodelVersion]; // using data from above
-const uid = WodelJodelConfig.createDeviceUID();
-const config = new WodelJodelConfig(uid, keyConfig);
 ```
 
 ### Own JodelConfig class
