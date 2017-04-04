@@ -10,12 +10,8 @@ type JodelVersion = "4.27.0" | "4.28.1" | "4.29.1" | "4.30.2" | "4.31.1" | "4.35
 const latestJodelVersion: JodelVersion = "4.35.6";
 
 const jodelKeys = {
-	"4.27.0": { key: "VwJHzYUbPjGiXWauoVNaHoCWsaacTmnkGwNtHhjy", clientVersion: "4.27.0", apiVersion: "0.2" },
-	"4.28.1": { key: "aPLFAjyUusVPHgcgvlAxihthmRaiuqCjBsRCPLan", clientVersion: "4.28.1", apiVersion: "0.2" },
-	"4.29.1": { key: "dIHNtHWOxFmoFouufSflpTKYjPmCIhWUCQHgbNzR", clientVersion: "4.29.1", apiVersion: "0.2" },
-	"4.30.2": { key: "zpwKnTvubiKritHEnjOTcTeHxLJJNTEVumuNZqcE", clientVersion: "4.30.2", apiVersion: "0.2" },
-	"4.31.1": { key: "plerFToqEdWlzShdZlTywaCHRuzlKIMsNmOJVDGE", clientVersion: "4.31.1", apiVersion: "0.2" },
 	"4.35.6": { key: "cYjTAwjdJyiuXAyrMhkCDiVZhshhLhotNotLiPVu", clientVersion: "4.35.6", apiVersion: "0.2" },
+	"4.38.3": { key: "KZmLMUggDeMzQfqMNYFLWNyttEmQgClvlPyACVlH", clientVersion: "4.38.3", apiVersion: "0.2" },
 };
 ```
 The keys change with every release. If there are new keys available, this list might be updated.
