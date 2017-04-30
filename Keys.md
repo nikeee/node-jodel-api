@@ -4,11 +4,6 @@ However, [there are some keys publicly available on the internet](https://bitbuc
 
 These are some publicly available keys:
 ```TypeScript
-import { JodelKeyConfig } from "jodel-api";
-
-type JodelVersion = "4.27.0" | "4.28.1" | "4.29.1" | "4.30.2" | "4.31.1" | "4.35.6";
-const latestJodelVersion: JodelVersion = "4.35.6";
-
 const jodelKeys = {
 	"4.35.6": { key: "cYjTAwjdJyiuXAyrMhkCDiVZhshhLhotNotLiPVu", clientVersion: "4.35.6", apiVersion: "0.2" },
 	"4.38.3": { key: "KZmLMUggDeMzQfqMNYFLWNyttEmQgClvlPyACVlH", clientVersion: "4.38.3", apiVersion: "0.2" },
