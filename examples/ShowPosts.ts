@@ -1,4 +1,6 @@
 // npm i -S jodel-api
+// Get an API key as described in https://github.com/nikeee/node-jodel-api/blob/master/Keys.md
+// Replace the key below
 // tsc --module commonjs --target ES2015 ShowPosts.ts
 
 import { JodelClient, JodelKeyConfig, AndroidJodelConfig } from "jodel-api";
