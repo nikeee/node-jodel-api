@@ -8,6 +8,7 @@ const jodelKeys = {
 	"4.35.6": { key: "cYjTAwjdJyiuXAyrMhkCDiVZhshhLhotNotLiPVu", clientVersion: "4.35.6", apiVersion: "0.2" },
 	"4.38.3": { key: "KZmLMUggDeMzQfqMNYFLWNyttEmQgClvlPyACVlH", clientVersion: "4.38.3", apiVersion: "0.2" },
 	"4.40.1": { key: "XcpPpQcnfqEweoHRuOQbeGrRryHfxCoSkwpwKoxE", clientVersion: "4.40.1", apiVersion: "0.2" },
+	"4.42.4": { key: "bJYlFZkrnLpLMVisrbstPDNsaYHPbzcKRSpqtjtt", clientVersion: "4.42.4", apiVersion: "0.2" },
 };
 ```
 The keys change with every release. If there are new keys available, this list might be updated.
