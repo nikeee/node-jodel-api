@@ -3,3 +3,6 @@
 Keys.md
 Other-Projects.md
 examples/
+.editorconfig
+.travis.yml
+.vscode/

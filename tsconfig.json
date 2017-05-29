@@ -3,6 +3,9 @@
 		"module": "commonjs",
 		"declaration": true,
 		"target": "es2015",
+		"lib":[
+			"es2015"
+		],
 		"sourceMap": false,
 		"outDir": "dist",
 		"newLine": "LF",

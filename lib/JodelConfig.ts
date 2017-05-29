@@ -97,10 +97,6 @@ export class JodelConfigBase implements JodelConfig {
 	}
 }
 
-export interface JodelKeyConfigs<TVersion> {
-	[version: string]: JodelKeyConfig<TVersion>
-}
-
 export interface JodelKeyConfig<TVersion> {
 	key: string;
 	clientVersion: TVersion;
