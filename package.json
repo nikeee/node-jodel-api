@@ -27,9 +27,9 @@
   },
   "dependencies": {
     "@types/humps": "^1.1.2",
-    "@types/node": "^6.0.46",
-    "@types/node-fetch": "^1.6.5",
+    "@types/node": "^6.0.78",
+    "@types/node-fetch": "^1.6.7",
     "humps": "^1.1.0",
-    "node-fetch": "^1.6.0"
+    "node-fetch": "^1.7.1"
   }
 }
