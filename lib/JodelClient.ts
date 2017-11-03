@@ -3,7 +3,9 @@ import * as humps from "humps";
 import * as querystring from "querystring";
 
 import * as Types from "./JodelInterfaces";
-import { JodelConfig } from "./JodelConfig";
+import { JodelConfig, FillableJodelConfig, fillDefaults } from "./JodelConfig";
+
+import * as jodelCrypto from "./crypto";
 
 class JodelAPI {
 	constructor(private readonly config: JodelConfig, public accessToken: Types.AccessToken | undefined) {
@@ -51,7 +53,7 @@ class JodelAPI {
 		let headers = this.createHeaders(accessToken);
 		const bodyStr = body ? JSON.stringify(body) : "";
 
-		headers = await this.config.signHeaders(method, "/api" + path, new Date(), qs, bodyStr, headers);
+		headers = await jodelCrypto.signHeaders(this.config, method, "/api" + path, new Date(), qs, bodyStr, headers);
 
 		// console.log("Url: %s", url);
 		// console.log("Query params:"); console.dir(queryParams);
@@ -310,20 +312,15 @@ class JodelAPI {
 export class JodelClient {
 	private readonly api: JodelAPI;
 	private ownId: string;
+	private readonly config: JodelConfig;
 
 	public get accessToken(): Types.AccessToken | undefined {
 		return this._accessToken;
 	}
 
-	constructor(private readonly config: JodelConfig, private _accessToken?: Types.AccessToken) {
-		this.api = new JodelAPI(config, _accessToken);
-	}
-
-	/**
-	 * @deprecated Use JodeClient#register instead
-	 */
-	public login(location: Types.Location): Promise<void> {
-		return this.register(location);
+	constructor(config: FillableJodelConfig, private _accessToken?: Types.AccessToken) {
+		this.config = fillDefaults(config);
+		this.api = new JodelAPI(this.config, _accessToken);
 	}
 
 	public async register(location: Types.Location): Promise<void> {
@@ -337,7 +334,7 @@ export class JodelClient {
 		this._accessToken = authRes.accessToken;
 		this.api.accessToken = this._accessToken;
 	}
-	public loginWithToken(accessToken: Types.AccessToken): Promise<void> {
+	public login(accessToken: Types.AccessToken): Promise<void> {
 		if (!accessToken) return Promise.reject<void>("No access token provided");
 		// Maybe this will do an async operation some day
 		this._accessToken = accessToken;

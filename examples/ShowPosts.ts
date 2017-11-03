@@ -3,24 +3,30 @@
 // Replace the key below
 // tsc --module commonjs --target ES2015 ShowPosts.ts
 
-import { JodelClient, JodelKeyConfig, AndroidJodelConfig } from "jodel-api";
+import { JodelClient, JodelKeyConfig, createDeviceUID } from "../lib/lib"; // "jodel-api";
 
 // See Keys.md
-const keyConfig: JodelKeyConfig<"4.31.1"> = { key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", clientVersion: "4.31.1", apiVersion: "0.2" };
+const keyConfig = {
+	key: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+	clientVersion: "4.67.1",
+};
 
 // Create a random UID. Do not do this every time.
-// Instead, re - use the first generated UID + accessToken by loggin in with
+// Instead, re-use the first generated UID + accessToken by loggin in with
 // JodelClient#loginWithToken
-const uid = AndroidJodelConfig.createDeviceUID();
+const uid = createDeviceUID();
 
-const config = new AndroidJodelConfig(uid, keyConfig);
+const config = {
+	keyConfig: keyConfig,
+	deviceUID: uid,
+};
 
 async function main() {
 	try {
 		const client = new JodelClient(config);
-		console.log("Loggin in...");
+		console.log("Registering...");
 
-		await client.login({
+		await client.register({
 			city: "",
 			country: "DE",
 			locAccuracy: 10,
@@ -29,9 +35,9 @@ async function main() {
 				lng: 0
 			}
 		});
-		console.log("Logged in!");
+		console.log("Registered!");
 		console.log("Token: " + client.accessToken);
-		// the token can be passed to JodelClient#loginWithToken to use the same token to login back again.
+		console.log("the token can be passed to JodelClient#login to use the same token to login back again.");
 
 		const res = await client.getKarma();
 		console.log("Karma: " + res.karma);
