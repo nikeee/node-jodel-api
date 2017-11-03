@@ -6,3 +6,4 @@ examples/
 .editorconfig
 .travis.yml
 .vscode/
+lib/*.js
