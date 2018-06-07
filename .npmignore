@@ -1,9 +1,9 @@
+.vscode/
+examples/
+src/
 *.ts
 !*.d.ts
-Keys.md
-Other-Projects.md
-examples/
+*.md
 .editorconfig
 .travis.yml
-.vscode/
-lib/*.js
+tsconfig.json

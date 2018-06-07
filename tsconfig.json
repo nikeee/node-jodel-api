@@ -1,21 +1,20 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
+		"module": "es2015",
 		"declaration": true,
 		"target": "es2015",
 		"lib":[
 			"es2015"
 		],
 		"sourceMap": false,
-		"outDir": "dist",
+		"outDir": "lib",
 		"newLine": "LF",
 		"removeComments": true,
 		"noImplicitReturns": true,
 		"strict": true
 	},
 	"exclude": [
-		"dist",
-		"examples",
-		"node_modules/typescript"
+		"lib",
+		"examples"
 	]
 }
