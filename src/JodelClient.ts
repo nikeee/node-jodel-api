@@ -311,7 +311,6 @@ class JodelAPI {
 
 export class JodelClient {
 	private readonly api: JodelAPI;
-	private ownId: string;
 	private readonly config: JodelConfig;
 
 	public get accessToken(): Types.AccessToken | undefined {
