@@ -1,8 +1,7 @@
-dist/*
-*.js.map
+lib/
 node_modules/
-*.log
 .settings/
 .ideas
-lib/*.js
-examples/*.js
+*.js
+*.js.map
+*.log
