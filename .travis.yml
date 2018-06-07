@@ -1,14 +1,28 @@
 language: node_js
-node_js:
-  - 'stable'
-  - '6'
-  - '7'
 sudo: false
-install:
-  - npm install
-  - npm update
-cache:
-  directories:
-    - node_modules
+node_js:
+  - stable
+  - node
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+
+cache: npm
+
+before_install: npm i -g npm@latest
+install: npm ci
+
+deploy:
+  provider: npm
+  skip-cleanup: true
+  email: "nikeee@outlook.com"
+  api_key: $NPM_TOKEN
+  on:
+    branch: master
+    tags: true
+    node: node
+
 git:
-depth: 1
+  depth: 1
