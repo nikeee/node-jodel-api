@@ -5,8 +5,8 @@
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
-	"test": "tsc --noEmit",
-	"compile": "tsc",
+    "test": "tsc --noEmit",
+    "compile": "tsc",
     "prePublish": "npm run compile"
   },
   "repository": {
