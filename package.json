@@ -6,8 +6,9 @@
   "typings": "./lib/index.d.ts",
   "scripts": {
     "test": "tsc --noEmit",
+    "clean": "rm -rv -- lib/* || true",
     "compile": "tsc",
-    "prePublish": "npm run compile"
+    "prepare": "npm run compile"
   },
   "repository": {
     "type": "git",
