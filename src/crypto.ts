@@ -68,6 +68,8 @@ function encodeParams(ps: string): string {
 	const resArr: string[] = [];
 	for (let key in qs) {
 		const value = qs[key];
+		if (Array.isArray(value))
+			continue;
 		resArr.push(encodeComponent(key) + "%" + encodeComponent(value));
 	}
 	return resArr.join("%");
