@@ -3,15 +3,11 @@ sudo: false
 node_js:
   - stable
   - node
-  - 6
-  - 7
-  - 8
-  - 9
   - 10
+  - 11
 
 cache: npm
 
-before_install: npm i -g npm@latest
 install: npm ci
 
 deploy:
