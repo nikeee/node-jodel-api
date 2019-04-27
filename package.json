@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/nikeee/node-jodel-api#readme",
   "devDependencies": {
-    "typescript": "^3.4.4"
+    "typescript": "^3.4.5"
   },
   "dependencies": {
     "@types/humps": "^1.1.2",
-    "@types/node": "^11.13.6",
-    "@types/node-fetch": "^2.3.2",
+    "@types/node": "^11.13.8",
+    "@types/node-fetch": "^2.3.3",
     "humps": "^2.0.1",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.4.1"
   }
 }
