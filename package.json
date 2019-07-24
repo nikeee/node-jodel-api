@@ -30,7 +30,7 @@
   "dependencies": {
     "@types/humps": "^1.1.2",
     "@types/node": "^12.6.8",
-    "@types/node-fetch": "^2.3.7",
+    "@types/node-fetch": "^2.5.0",
     "humps": "^2.0.1",
     "node-fetch": "^2.6.0"
   }
