@@ -75,8 +75,8 @@ class JodelAPI {
 			};
 			return Promise.reject<T>(rejection);
 		}
-		const resObj = await res.json();
-		const convertedCase: T = humps.camelizeKeys(resObj) as T;
+		const resObj = await res.json() as object;
+		const convertedCase: T = humps.camelizeKeys(resObj) as unknown as T;
 		// console.log("Response:"); console.dir(convertedCase);
 		return convertedCase;
 	}
