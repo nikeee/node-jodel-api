@@ -1,6 +1,6 @@
 {
   "name": "jodel-api",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "Node.js Jodel API",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
