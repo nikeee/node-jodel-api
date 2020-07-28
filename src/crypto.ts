@@ -70,7 +70,7 @@ function encodeParams(ps: string): string {
 		const value = qs[key];
 		if (Array.isArray(value))
 			continue;
-		resArr.push(encodeComponent(key) + "%" + encodeComponent(value));
+		resArr.push(encodeComponent(key) + "%" + encodeComponent(value!));
 	}
 	return resArr.join("%");
 }
