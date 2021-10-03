@@ -7,3 +7,5 @@ There are other projects that implement the Jodel API that are worth looking at.
 - [JodelAPI](https://github.com/ioncodes/JodelAPI) (.NET)
 - [node-jodel](https://github.com/Hanse/node-jodel) (node.js, but broken)
 - [Some wiki entry](http://jodel-app.wikia.com/wiki/API)
+- [Notes on reversing Jodel](https://github.com/JodelRaccoons/JodelReversing)
+- [JodelPatched](https://github.com/JodelRaccoons/JodelPatched), a modified Jodel client
