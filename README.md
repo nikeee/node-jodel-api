@@ -1,6 +1,8 @@
 # node-jodel-api [![Build Status](https://travis-ci.com/nikeee/node-jodel-api.svg?branch=master)](https://travis-ci.com/nikeee/node-jodel-api) [![npm version](https://badge.fury.io/js/jodel-api.svg)](https://www.npmjs.com/package/jodel-api) ![Dependency Status](https://david-dm.org/nikeee/jodel-api.svg) ![License](https://img.shields.io/npm/l/jodel-api.svg)
 > Node.js Jodel API, written in TypeScript
 
+Archived as of 2022-07-21 due to missing capacity for maintaining this project. If you want to help maintaining this project, feel free to drop a mail!
+
 ## Using the Library
 ```Shell
 npm install -S jodel-api
